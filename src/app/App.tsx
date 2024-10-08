@@ -1,8 +1,8 @@
-import React, { Suspense } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import React from 'react';
+import { AppRouter } from 'app/providers/router';
 import { useTheme } from 'app/providers/ThemeProvider';
-import { AboutPage, MainPage } from 'pages';
 import { classNames } from 'helpers/classNames/classNames';
+import { Navbar } from 'widgets/Navbar';
 import 'app/styles/index.scss';
 
 const App = () => {
@@ -10,22 +10,11 @@ const App = () => {
 
     return (
         <div className={classNames('app', [theme])}>
+            <Navbar/>
+            <AppRouter/>
             <button onClick={toggleTheme}>
                 Toggle Theme
             </button>
-            <Link to={'/'}>
-                Main
-            </Link>
-            <Link to={'/about'}>
-                About
-            </Link>
-
-            <Suspense fallback={<div>Loading...</div>}>
-                <Routes>
-                    <Route path={'/about'} element={<AboutPage/>}/>
-                    <Route path={'/'} element={<MainPage/>}/>
-                </Routes>
-            </Suspense>
         </div>
     );
 };
