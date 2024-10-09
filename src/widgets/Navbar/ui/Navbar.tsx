@@ -2,9 +2,11 @@ import React from 'react';
 import { classNames } from 'helpers';
 import { BaseComponentProps } from 'app/types';
 import { AppLink, AppLinkTheme } from 'shared/ui';
+import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
 import cls from './Navbar.module.scss';
 
-interface NavbarProps extends BaseComponentProps {}
+interface NavbarProps extends BaseComponentProps {
+}
 
 export const Navbar = ({extraClasses}: NavbarProps) => {
     return (

@@ -7,5 +7,3 @@ export const classNames = (cls: string, extraClasses: string[] = [], mods: Mods 
         ...Object.keys(mods).filter(key => mods[key])
     ].join(' ');
 };
-
-
