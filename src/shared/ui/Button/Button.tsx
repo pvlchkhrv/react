@@ -3,7 +3,6 @@ import { classNames } from 'helpers';
 import { BaseComponentProps } from 'app/types';
 import cls from './Button.module.scss';
 
-
 export enum ThemeButton {
     Clear = 'clear',
 
@@ -22,7 +21,11 @@ export const Button: FC<ButtonProps> = (props) => {
     } = props;
 
     return (
-        <button className={classNames(cls.Button, [extraClasses, cls[theme]])} {...otherProps}>
+        <button
+            type="button"
+            className={classNames(cls.Button, [extraClasses, cls[theme]])}
+            {...otherProps}
+        >
             {children}
         </button>
     );

@@ -9,13 +9,13 @@ interface UseThemeReturnValue {
 export const useTheme = (): UseThemeReturnValue => {
     const { theme, setTheme } = useContext(ThemeContext);
     const toggleTheme = () => {
-        const newTheme = theme === Theme.Dark ? Theme.Light : Theme.Dark
+        const newTheme = theme === Theme.Dark ? Theme.Light : Theme.Dark;
         setTheme(newTheme);
         localStorage.setItem(LOCAL_STORAGE_THEME_KEY, newTheme);
     };
 
     return {
         theme,
-        toggleTheme
+        toggleTheme,
     };
 };
