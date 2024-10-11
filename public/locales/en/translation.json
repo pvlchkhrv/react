@@ -1,4 +1,6 @@
 {
-  "Тестовый пример": "Test example",
-  "Перевод": "Translate"
+  "Test example": "Test example",
+  "Translate": "Translate",
+  "Not found": "Not found",
+  "Toggle theme": "Toggle theme"
 }
